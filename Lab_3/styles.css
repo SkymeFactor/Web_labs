@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    background: #333b65;
+}
+h2 {
+    color: ivory;
+    font-size: 14pt;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+}
+.output {
+    color: ivory;
+    font-size: 10pt;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    margin-left: 15px;
+}
+.content {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+}
+.field_borders {
+    background: whitesmoke;
+    margin: 0px;
+    padding: 0px;
+    border-left: 5px solid #4c88b9;
+}
