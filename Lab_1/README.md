@@ -21,4 +21,3 @@
 *за несвоевременную сдачу лабораторной работы предусмотрено снижение баллов, подробнее уточняйте у своего преподавателя практики*;  
 *если вы ранее не сталкивались с версткой, рекомендую к прочтению [основы HTML](https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/HTML_basics), [основы CSS](https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/CSS_basics)*.
 
-
