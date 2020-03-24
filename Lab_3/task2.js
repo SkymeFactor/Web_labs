@@ -13,7 +13,7 @@ console.log(sum.call(this, [5, 5, 5, 5, 5, 5, 5, 5, 5]));
 
 document.getElementById("sum").innerHTML = sum.call(this, [5, 5, 5, 5, 5, 5, 5, 5, 5]);
 
-//Second variant:
+//Second variant, here we don't need to use this while call:
 var sum = {
     call : (set) => {
         var total = 0;
