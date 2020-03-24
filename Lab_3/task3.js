@@ -14,10 +14,12 @@ const object3 = {
 };
 
 function isEquivalent(left, right){
-	if (left.name == right.name && left.age == right.age)
-		return true;
-	else
-		return false;
+	for (const i of Object.keys(left)){
+		if (left[i] != right[i]){
+			return false;
+		}
+	}
+	return true;
 }
 
 // Реализуйте функцию isEquivalent
