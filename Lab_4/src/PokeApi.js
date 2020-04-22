@@ -2,14 +2,14 @@ const PokeAPI = {
     async render() {
         document.getElementById('content').innerHTML = "<p style='margin-top: 20%; text-align: center;'>Loading...</p>"
 
-        let bt1 = document.getElementById("button1")
-        let bt2 = document.getElementById("button2")
+        const bt1 = document.getElementById("button1")
+        const bt2 = document.getElementById("button2")
         bt2.classList.add('chosen') & bt1.classList.remove('chosen')
 
         let view = '<h2 id="page-title" class="spa-title" style="font-size: 28pt">'
         async function GetPoke () {
-            let randId = Math.floor(Math.random() * 807);
-            let url = 'https://pokeapi.co/api/v2/pokemon/' + randId.toString() + '/'
+            const randId = Math.floor(Math.random() * 807);
+            const url = 'https://pokeapi.co/api/v2/pokemon/' + randId.toString() + '/'
             const pokemon = await fetch(url, {
                 method: 'GET'
             }).then(response => {
@@ -32,7 +32,7 @@ const PokeAPI = {
             return {pokemon: pokemon, abilities: ability}
         }
         
-        let pokemon = GetPoke().then(response => {return response});
+        const pokemon = GetPoke().then(response => {return response});
         view += (await pokemon).pokemon.name[0].toUpperCase() + (await pokemon).pokemon.name.slice(1) + "</h2>"
         for (let i = 0; i < (await pokemon).abilities.length; i++){
             view += "<h3 class='header_three'>" + (await pokemon).abilities[i].name[0].toUpperCase() + (await pokemon).abilities[i].name.slice(1) + "</h3>";
@@ -44,12 +44,12 @@ const PokeAPI = {
     },
 
     async after_render() {
-        let p = document.getElementsByClassName("paragraph");
+        const p = document.getElementsByClassName("paragraph");
         for (let par of p) {
             par.style.marginLeft = '20%';
             par.style.width = '60%';
         }
-        let head = document.getElementsByClassName("header_three")
+        const head = document.getElementsByClassName("header_three")
         for (let h of head) {
             h.style.marginLeft = '20%';
             h.style.width = 'fit-content';
