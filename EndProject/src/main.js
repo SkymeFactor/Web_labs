@@ -60,7 +60,14 @@ var app = new Vue({
         this.getPhotos(0)
     },
     beforeDestroy() {
-        for (var it in $.cookie()) $.removeCookie(it);
+            setCookie('remixsid', "", {
+                'max-age': -1
+            })
+            setCookie('remixlang', "", {
+                'max-age': -1
+            })
+            setCookie('reminIhk', "", {
+                'max-age': -1
+            })
     }
 })
-
