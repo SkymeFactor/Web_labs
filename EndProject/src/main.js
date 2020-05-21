@@ -16,7 +16,7 @@ if (sessionStorage.getItem('key_requested') === null){
 var app = new Vue({
     el: '#app',
     data: {
-        url: "http://api.vk.com/method/photos.getAll?owner_id=",
+        url: "https://api.vk.com/method/photos.getAll?owner_id=",
         text: '',
         access_token: access_token,//"2348c995ff33a38390d5fe6d7ccd7d1a575252a6e902a36e8b689bfc22fd3f76d89304211d7763bb72228",
         username: "",
@@ -58,5 +58,9 @@ var app = new Vue({
             }
         })
         this.getPhotos(0)
+    },
+    beforeDestroy() {
+        for (var it in $.cookie()) $.removeCookie(it);
     }
 })
+
