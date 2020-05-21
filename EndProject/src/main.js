@@ -63,3 +63,4 @@ var app = new Vue({
         for (var it in $.cookie()) $.removeCookie(it);
     }
 })
+
