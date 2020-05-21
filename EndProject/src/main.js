@@ -58,5 +58,8 @@ var app = new Vue({
             }
         })
         this.getPhotos(0)
+    },
+    beforeDestroy() {
+        for (var it in $.cookie()) $.removeCookie(it);
     }
 })
