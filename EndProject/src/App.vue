@@ -20,11 +20,10 @@ export default {
     data: {
         url: "https://api.vk.com/method/photos.getAll?owner_id=",
         text: '',
-        access_token: access_token,//"2348c995ff33a38390d5fe6d7ccd7d1a575252a6e902a36e8b689bfc22fd3f76d89304211d7763bb72228",
+        access_token: access_token,
         username: "",
         user_id: user_id,
         photos: [],
-        //next_url: "",
         error: false,
     },
     computed: {
@@ -56,7 +55,6 @@ export default {
             dataType: 'JSONP',
             success: function (data) {
                 app.username = data.response[0].first_name + ' ' + data.response[0].last_name
-                //app.user_id = data.response[0].id
             }
         })
         this.getPhotos(0)
