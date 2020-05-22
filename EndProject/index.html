@@ -11,17 +11,7 @@
     </head>
     <body>
         <div id="app">
-            <h1><a :href="getPage">See {{ username }}&nbspat VK.com</a></h1>
-            <template v-if="photos.length > 0"></template>
-                <div v-for="photo in photos">
-                    <a :href="photo">
-                        <img :src="photo" :alt="photo"/>
-                    </a>
-                </div>
-            </template>
-            <div v-else class="loading"></div>
-            <div v-if="error" class="error">Sorry, photos from your profile couldn't be fetched.</div>
-            <button @click="getPhotos(photos.length)">Load More</button>
+            
         </div>
         <script src="./dist/bundle.js"></script>
     </body>
