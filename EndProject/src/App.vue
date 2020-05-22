@@ -58,23 +58,6 @@ export default {
             }
         })
         this.getPhotos(0)
-    },
-    beforeRouterLeave(to, from, next) {
-        const answer = window.confirm('Вы хотите уйти? У вас есть несохранённые изменения!')
-        if (answer) {
-            next()
-        } else {
-            next(false)
-        }
-        setCookie('remixsid', "", {
-            'max-age': -1
-        })
-        setCookie('remixlang', "", {
-            'max-age': -1
-        })
-        setCookie('reminIhk', "", {
-            'max-age': -1
-        })
     }
 }
 </script>
